@@ -23,4 +23,6 @@ pip install requests
 
 # SCREENSHOT OF THE EXTENSION
 ![VyManga Scraper Extension](https://github.com/Kirogii/VyManga-Scraper-With--MAL-Conversion/blob/main/Extension.png?raw=true)
-This supports conversion of collections and history (Doesn't process the html from homepage or searches)
+This supports conversion of collections and history
+
+                             (Doesn't process the html from homepage or searches)
