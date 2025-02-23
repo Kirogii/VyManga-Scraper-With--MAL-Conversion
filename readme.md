@@ -1,6 +1,8 @@
 # THINGS YOU'RE GOING TO NEED:
  - Python
-
+```sh
+https://www.python.org/downloads/
+```
 ## RUN THIS COMMAND IN PYTHON:
 ```sh
 pip install requests
