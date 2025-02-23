@@ -7,7 +7,6 @@ import concurrent.futures
 import time
 from requests.exceptions import RequestException
 
-
 # --- API Request Functions ---
 
 # Function to get the user ID from MAL username
@@ -44,7 +43,7 @@ def get_manga_id_jikan(title, max_retries=3):
         except RequestException as e:
             if isinstance(e, requests.exceptions.HTTPError) and e.response.status_code == 429:
                 print(f"Jikan: Rate limit detected (attempt {attempt + 1}/{max_retries}). Waiting...")
-                time.sleep(20)  # Wait for 20 seconds
+                time.sleep(10)  # Wait for 10 seconds
             else:
                 print(f"Jikan Request failed (attempt {attempt + 1}/{max_retries}): {e}")
                 break  # Exit the retry loop for other errors
@@ -154,6 +153,9 @@ def create_mal_xml(manga_list, output_file, user_id, user_name):
                     ET.SubElement(manga_entry, "my_start_date").text = "0000-00-00"
                     ET.SubElement(manga_entry, "my_finish_date").text = "0000-00-00"
                     ET.SubElement(manga_entry, "my_scanalation_group").text = "<![CDATA[]]>"
+                    # ADD THIS LINE:
+                    ET.SubElement(manga_entry, "update_on_import").text = "1"  # <--- ADD THIS LINE
+
                 else:
                     missing_titles.append((title, chapter))
 
