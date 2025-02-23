@@ -21,5 +21,5 @@ pip install requests
  - Then it should pop up a window for selecting files. Select the TXT file that you downloaded from the extension  
  - Wait for it to finish; it takes a while  
 
-# SCREENSHOT OF THE PROGRAM
+# SCREENSHOT OF THE EXTENSION
 ![VyManga Scraper Extension](https://github.com/Kirogii/VyManga-Scraper-With--MAL-Conversion/blob/main/Extension.png?raw=true)
